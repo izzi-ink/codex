@@ -1,0 +1,12 @@
+[[headers]]
+  for = "/*.map"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "GET, OPTIONS"
+    Access-Control-Allow-Headers = "*"
+    Content-Type = "application/octet-stream"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
