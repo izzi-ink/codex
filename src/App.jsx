@@ -11,7 +11,9 @@ function App() {
 
   // Test URL using OpenStreetMap
   // const mapUrl = 'https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik';
-  const mapUrl = '/assets/maps/map.map';
+  // Local map file path with debug logging
+  const mapUrl = '/assets/maps/kyrkon-world.map';
+  console.log('App mapUrl:', mapUrl); // For debugging
 
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col">

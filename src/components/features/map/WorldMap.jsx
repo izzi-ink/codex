@@ -2,7 +2,13 @@
 import PropTypes from 'prop-types';
 
 const WorldMap = ({ mapUrl }) => {
-  const azgaarViewerUrl = `https://azgaar.github.io/Fantasy-Map-Generator/?maplink=${encodeURIComponent(mapUrl)}`;
+  // Get the full URL of your map including the base URL
+  const fullUrl = window.location.origin + mapUrl;
+  const encodedUrl = encodeURIComponent(fullUrl);
+  const azgaarViewerUrl = `https://azgaar.github.io/Fantasy-Map-Generator/index.html?maplink=${encodedUrl}`;
+
+  console.log('Map URL:', fullUrl); // For debugging
+  console.log('Encoded URL:', azgaarViewerUrl); // For debugging
 
   return (
     <div className="w-full h-[800px] border rounded-lg overflow-hidden bg-gray-50">
